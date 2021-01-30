@@ -16,7 +16,6 @@
     }
   },
   "projects": {
-    "words-search": { "tags": [] },
-    "words-search-e2e": { "tags": [], "implicitDependencies": ["words-search"] }
+    "words-search": { "tags": [] }
   }
 }
