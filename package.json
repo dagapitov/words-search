@@ -38,7 +38,11 @@
     "@angular/platform-browser-dynamic": "^11.0.0",
     "@angular/router": "^11.0.0",
     "@nrwl/angular": "11.2.6",
+    "angular-cropperjs": "^1.0.2",
+    "cropperjs": "^1.5.9",
+    "ngx-dropzone": "^3.0.0",
     "rxjs": "~6.6.3",
+    "tesseract.js": "^2.1.4",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"
   },

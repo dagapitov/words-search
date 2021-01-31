@@ -1,0 +1,12 @@
+<table class="word-search">
+  <tr *ngFor="let row of lettersGrid.rows; let rowIndex = index">
+    <td *ngFor="let letter of row; let colIndex = index" class="letters-table__letter-cell dropdown">
+      <span contenteditable="true" [ngClass]="{'highlight' : isHighlighted(rowIndex, colIndex)}" >{{ letter }}</span>
+
+      <span class="dropdown-content">
+        <button class="toolbar-button" type="button" (click)="remove(rowIndex, colIndex)">Remove</button>
+        <button class="toolbar-button" type="button" (click)="insert(rowIndex, colIndex)">Insert </button>
+      </span>
+    </td>
+  </tr>
+</table>
