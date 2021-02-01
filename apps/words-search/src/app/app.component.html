@@ -5,7 +5,11 @@
   <angular-cropper #angularCropper *ngIf="!!imageUrl" [cropperOptions]="config" [imageUrl]="imageUrl"></angular-cropper>
 </div>
 <div *ngIf="!!imageUrl" class="conversion">
-  <button class="parse" type="button" (click)="parseSelection()">Parse Selection as Table</button>
+  <select #lang name="lang" id="lang">
+    <option value="eng">English</option>
+    <option value="fra">French</option>
+  </select>
+  <button class="parse" type="button" (click)="parseSelection(lang.value)">Parse Selection as Table</button>
   <status *ngIf="!!status" [progress]="status.progress" [status]="status.status"></status>
 </div>
 

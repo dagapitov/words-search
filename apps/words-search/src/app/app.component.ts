@@ -69,7 +69,7 @@ export class AppComponent {
       this.imageUrl = this.sanitizer.bypassSecurityTrustUrl(URL.createObjectURL(blob));
   }
 
-  parseSelection() {
+  parseSelection(lang: string) {
     const croppedImage = this.angularCropper.cropper.getCroppedCanvas().toDataURL();
 
     const worker = createWorker({
@@ -81,8 +81,8 @@ export class AppComponent {
 
     (async () => {
       await worker.load();
-      await worker.loadLanguage('eng');
-      await worker.initialize('eng');
+      await worker.loadLanguage(lang || 'eng');
+      await worker.initialize(lang || 'eng');
       await worker.setParameters({
         tessjs_create_box: '1',
         tessjs_create_unlv: '1',
